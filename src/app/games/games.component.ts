@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
+    <h3>this is my favorites games de {{username}}</h3>
      <ul>
        @for (item of games; track $index) {
          <li>{{item.name}}</li>
@@ -15,6 +16,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './games.component.css'
 })
 export class GamesComponent {
+  @Input()  username : string =  '';
    games = [ 
     {
       id:1,

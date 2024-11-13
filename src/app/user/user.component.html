@@ -6,9 +6,9 @@
     src="https://github.com/manuelguirado.png" alt="photo">
    }@else {
     <p>please login </p>
-    <button (click)="isLogginIn = true">log in </button>
+    <button (click)="isLogginIn = true">log in     </button>  <!-- create a status changing is loggin in or not-->
    }
-<app-games/>
+<app-games username="{{username}}"/>
    
 </section>
 
