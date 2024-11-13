@@ -1,4 +1,4 @@
-import { Component, Input, input } from '@angular/core';
+import { Component, EventEmitter, Input, input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,14 +9,20 @@ import { CommonModule } from '@angular/common';
     <h3>this is my favorites games de {{username}}</h3>
      <ul>
        @for (item of games; track $index) {
-         <li>{{item.name}}</li>
+         <li (click)="fav(games[$index].name) ">{{item.name}}</li>
        }
      </ul>
   `,
   styleUrl: './games.component.css'
 })
 export class GamesComponent {
-  @Input()  username : string =  '';
+  fav(gameName : string){
+    this.favGame.emit(gameName); //emit the event to the parent
+
+
+  }
+  @Output()  favGame = new EventEmitter<string>(); //Ccreate a custom event to send to the pather component the favorite game
+  @Input()  username : string =  ''; //get the valor for the parent component and show it here
    games = [ 
     {
       id:1,

@@ -19,4 +19,5 @@ export class AppComponent {
     greet(){
      alert('hello how are you');  
    }
+
 }

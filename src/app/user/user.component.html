@@ -8,8 +8,13 @@
     <p>please login </p>
     <button (click)="isLogginIn = true">log in     </button>  <!-- create a status changing is loggin in or not-->
    }
-<app-games username="{{username}}"/>
-   
+<app-games 
+(favGame)="getFavoriteGame($event)"
+username="{{username}}"/> <!--call the function getFavoriteGame to get the favorirte game--> 
+
+   @if (favgame !== '') {
+    <p>your favorite game is {{favgame}} </p>   <!-- depends your favorite game send a different message for example if you click the unchecked game the message will be different-->
+   }
 </section>
 
 
