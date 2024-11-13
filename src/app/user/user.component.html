@@ -1,0 +1,17 @@
+<section>
+@if (isLogginIn) {
+    <p>hello {{username}}</p>
+    <img 
+    (click)="greet()"
+    src="https://github.com/manuelguirado.png" alt="photo">
+   }@else {
+    <p>please login </p>
+    <button (click)="isLogginIn = true">log in </button>
+   }
+<app-games/>
+   
+</section>
+
+
+
+
