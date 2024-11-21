@@ -21,7 +21,7 @@ export class GamesComponent {
 
 
   }
-  @Output()  favGame = new EventEmitter<string>(); //Ccreate a custom event to send to the pather component the favorite game
+  @Output()  favGame = new EventEmitter<string>(); //Create a new event emmiter to send the favorite game
   @Input()  username : string =  ''; //get the valor for the parent component and show it here
    games = [ 
     {
