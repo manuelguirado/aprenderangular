@@ -5,7 +5,8 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   template: `
-  
+      <p>comments to the people </p>
+      <img src="https://github.com/manuelguirado.png" alt="photo of manuel"/>
   `,
   styles: ``
 })
